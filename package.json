@@ -8,5 +8,11 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "node server.js",
+    "vercel-build": "node server.js",
+    "dev": "node server.js"
   }
 }
