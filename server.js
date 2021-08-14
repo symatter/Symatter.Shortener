@@ -6,7 +6,7 @@ const app = express()
 
 const routes = require('./src/routes')
 
-const {get, post} = require('./src/routes')
+const {get, post, defaultRoute} = require('./src/routes')
 
 // Database config
 const connection = require('./db.config')
@@ -20,6 +20,7 @@ app.use(express.json({
 
 app.use('/api/shorten', post);
 app.use('/:code', get);
+app.use('/', defaultRoute);
 
 
 const PORT = process.env.PORT || 5000
