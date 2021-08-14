@@ -6,7 +6,7 @@ const validUrl = require('valid-url')
 const shortid = require('shortid')
 
 exports.defaultRoute = async (req, res) => {
-    return res.redirect('https://symatter.com')
+    return res.redirect(process.env.DEFAULT_ROUTE)
 }
 
 exports.get = async (req, res) => {
